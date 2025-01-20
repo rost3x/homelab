@@ -1,5 +1,8 @@
 #  Homelab
 
+Homelab is a playground that every IT professional should own. This is the place where you can gain valuable knowledge and where you can make mistakes in order to grow your skillset.
+There isn't any particular rule as to what a homelab should look like, the main point is to do what interests you and break as many things (and then repair) as you can.
+
 ### Tech Stack
 
 <table>
