@@ -13,4 +13,14 @@ Once that's done, I can add 'no-subscription' repository that still allows us to
 
 ![image](https://github.com/user-attachments/assets/9e190a90-cbb6-46bf-8eee-78d5257c487c)
 
+After adding the repository, go to Updates and refresh the page:
+
+If everything works as intended you should see the updates on the page and you can apply them to your node.
+
+Doing updates this way is equivielent to running an update on your Proxmox node CLI with `app update && apt upgrade`.
+
+##### Possible issues 
+
+There is a change that you may get an error stating that the updates couldn't be downloaded. That is mainly caused by the DNS. Your DNS setting should be pointing to your home network DNS IP rather than 127.0.0.1.
+
 #### Enable email notifications  
