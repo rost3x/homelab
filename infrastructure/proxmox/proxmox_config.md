@@ -1,4 +1,4 @@
-#### Configuring updates
+### Configuring updates
 
 By default proxmox assumes that you have/will have enterprise licesne assigned. Since I use Proxmox for homelab, I need to configure it to apply updates without the license.
 To do that, click on the node:      
@@ -13,15 +13,23 @@ Once that's done, I can add 'no-subscription' repository that still allows us to
 
 ![image](https://github.com/user-attachments/assets/9e190a90-cbb6-46bf-8eee-78d5257c487c)
 
-After adding the repository, go to Updates and refresh the page:
+After adding the repository, go to Updates and click on "Refresh":
 
-If everything works as intended you should see the updates on the page and you can apply them to your node.
+![image](https://github.com/user-attachments/assets/fd86e061-05ee-4009-8224-42a96ae50678)
+
+If everything works as intended you should see the updates on the page that you can apply to your node.
+
+![image](https://github.com/user-attachments/assets/89b63a61-e110-44c4-8283-1e0e9b6ec816)
 
 Doing updates this way is equivielent to running an update on your Proxmox node CLI with `app update && apt upgrade`.
 
-##### Possible issues 
+![image](https://github.com/user-attachments/assets/fd149f2c-26d1-4d3a-991a-9b0900050556)
+
+#### Possible issues 
 
 There is a change that you may get an error stating that the updates couldn't be downloaded. That is mainly caused by the DNS. Your DNS setting should be pointing to your home network DNS IP rather than 127.0.0.1.
+
+![image](https://github.com/user-attachments/assets/50000a6e-4418-4538-8cba-9dfaace20df0)
 
 #### Setup notifications        
 
@@ -37,5 +45,4 @@ Once that's completed, you should be able to select it and send a test message. 
 Another important thing is to change your Notification Matchers, as again, by default it is directed to "mail-to-root".
 
 This is just a basic notifications setup. You can go into more details by adding specific "Notification Matchers" or perhas setting up Notifications to go to your email. I chose Discord as it keeps it separate from my already swamped mailbox.
-
 
