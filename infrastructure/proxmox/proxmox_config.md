@@ -23,4 +23,19 @@ Doing updates this way is equivielent to running an update on your Proxmox node 
 
 There is a change that you may get an error stating that the updates couldn't be downloaded. That is mainly caused by the DNS. Your DNS setting should be pointing to your home network DNS IP rather than 127.0.0.1.
 
-#### Enable email notifications  
+#### Setup notifications        
+
+I chose to receive any alerts to my Discord channel.        
+Discord allows you to create a server for free that you can use for communication with others, however, it also allows you to connect it to various services to provide alerts. Here is how I've done it with Proxmox.      
+
+Click on the Datacenter and scroll all the way down to Notifications. By default you will see "mail-to-root", however, it doesn't send the notifications anywhere since the root email doesn't exist.       
+
+Next, click on "Add" and select "Webhook". Here you need to enter your Discord channel webhook details followed by "Headers", "Body" and "Secrets".
+
+Once that's completed, you should be able to select it and send a test message. If everything was typed in correctly, you will get a notification on your channel.
+
+Another important thing is to change your Notification Matchers, as again, by default it is directed to "mail-to-root".
+
+This is just a basic notifications setup. You can go into more details by adding specific "Notification Matchers" or perhas setting up Notifications to go to your email. I chose Discord as it keeps it separate from my already swamped mailbox.
+
+
