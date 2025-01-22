@@ -46,3 +46,18 @@ Another important thing is to change your Notification Matchers, as again, by de
 
 This is just a basic notifications setup. You can go into more details by adding specific "Notification Matchers" or perhas setting up Notifications to go to your email. I chose Discord as it keeps it separate from my already swamped mailbox.
 
+#### Upload OS ISO      
+
+To deploy your first VM you'll need to upload the ISO first to your Proxmox hypervisor.     
+
+There are two ways to do that:      
+    - You can upload an ISO image from your machine.        
+    - You can upload an ISO directly from a URL link.       
+
+Expand your cluster and naviate to the local storage. There you can select "ISO Images", that's where we will upload the file.     
+
+Now we are presnted with two options we can either pick "Upload" or "Download from URL".        
+
+In my case I decided to upload the images from my local machine as I already had the images downloaded.     
+
+
