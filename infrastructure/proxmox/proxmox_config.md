@@ -38,11 +38,23 @@ Discord allows you to create a server for free that you can use for communicatio
 
 Click on the Datacenter and scroll all the way down to Notifications. By default you will see "mail-to-root", however, it doesn't send the notifications anywhere since the root email doesn't exist.       
 
+![image](https://github.com/user-attachments/assets/437e9cdd-863f-4f91-9836-2e875237c365)
+
 Next, click on "Add" and select "Webhook". Here you need to enter your Discord channel webhook details followed by "Headers", "Body" and "Secrets".
+
+![image](https://github.com/user-attachments/assets/3ec61325-9b4c-4f04-acff-6b39271789d8)
 
 Once that's completed, you should be able to select it and send a test message. If everything was typed in correctly, you will get a notification on your channel.
 
+![image](https://github.com/user-attachments/assets/bba6d688-8c0f-4fb4-b9f9-cfc93a274ade)
+
+![image](https://github.com/user-attachments/assets/b16fdfef-8ea3-44ad-ab50-cf9d0085999b)
+
 Another important thing is to change your Notification Matchers, as again, by default it is directed to "mail-to-root".
+
+![image](https://github.com/user-attachments/assets/4709adcb-0724-42b5-948f-12b4cc326bd5)
+
+![image](https://github.com/user-attachments/assets/83925e59-75ba-4766-8f66-87afb780911b)
 
 This is just a basic notifications setup. You can go into more details by adding specific "Notification Matchers" or perhas setting up Notifications to go to your email. I chose Discord as it keeps it separate from my already swamped mailbox.
 
