@@ -7,4 +7,7 @@ Once Grafana is set up on your server, you should be able to access it through `
 Default username: admin
 Default password: admin
 
+![image](https://github.com/user-attachments/assets/8d265dce-9d95-4993-a4e2-e5fd24601ac7)
+
+
 Once you sign in, you'll be prompted to change the password. 
