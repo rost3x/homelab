@@ -31,7 +31,8 @@ The next step was to create the service account and the systemd service
 
 `sudo vim /etc/systemd/system/node_exporter.service`        
 
-`[Unit]     
+```
+[Unit]     
 Description=Node Exporter       
 After=network.target        
 
@@ -42,4 +43,5 @@ Type=simple
 ExecStart=/usr/local/bin/node_exporter --web.config=/etc/prometheus_node_exporter/configuration.yml     
 
 [Install]       
-WantedBy=multi-user.target`     
+WantedBy=multi-user.target
+```  
