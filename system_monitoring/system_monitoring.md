@@ -23,7 +23,7 @@ tar xvfz node_exporter-*.*-amd64.tar.gz`
 
 Filling out the the "VERSION" and "OS - ARCH" with the one that I needed.       
 
-Then I moved the untared directory to `/usr/bin/local/`     
+Then I moved the `node_exporter` executable file that was in the tar directory to `/usr/bin/local/`     
 
 The next step was to create the service account and the systemd service       
 
@@ -34,13 +34,14 @@ The next step was to create the service account and the systemd service
 ```
 [Unit]     
 Description=Node Exporter       
-After=network.target        
+Wants=network-online.target     
+After=network-online.target        
 
 [Service]       
 User=node_exporter      
 Group=node_exporter     
 Type=simple     
-ExecStart=/usr/local/bin/node_exporter --web.config=/etc/prometheus_node_exporter/configuration.yml     
+ExecStart=/usr/local/bin/node_exporter     
 
 [Install]       
 WantedBy=multi-user.target
