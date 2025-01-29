@@ -50,8 +50,9 @@ WantedBy=multi-user.target
 Now that the systemd service was created I could run it.        
 `sudo systemctl enable --now node_exporter.service`     
 
-If everything if configured correctly, this is what you should see.     
+If everything if configured correctly, this is what you should see.    
 
+![image](https://github.com/user-attachments/assets/91df3312-d6c6-4c22-9666-de9d1c5fd703)
 
 **Depending on the system that you use, you may need to allow default port (9100) to be allowed on the firewall. In my case I've had to do it before I ran any node_exporter.**     
 
