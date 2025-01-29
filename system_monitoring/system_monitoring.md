@@ -45,4 +45,17 @@ ExecStart=/usr/local/bin/node_exporter
 
 [Install]       
 WantedBy=multi-user.target
-```  
+```     
+
+Now that the systemd service was created I could run it.        
+`sudo systemctl enable --now node_exporter.service`     
+
+If everything if configured correctly, this is what you should see.     
+
+
+**Depending on the system that you use, you may need to allow default port (9100) to be allowed on the firewall. In my case I've had to do it before I ran any node_exporter.**     
+
+`ufw allow 9100`
+
+**If you ran node_exporter before allowing port 9100 on your firewall, kill the process, allow the port and try running it again**
+
