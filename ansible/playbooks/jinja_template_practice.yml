@@ -1,0 +1,7 @@
+---
+- name: Template file creation
+  hosts: all
+  tasks:
+    - template:
+        src: /home/sysadmin/template.j2
+        dest: /tmp/template.txt
