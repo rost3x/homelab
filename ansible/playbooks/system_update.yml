@@ -1,0 +1,12 @@
+---
+- name: Update linux servers
+  hosts: all
+  become: true # Run as root
+
+  tasks:
+    - name: Update all distributions using DNF module
+      when: ansible_distribution == "Rocky"
+      ansible.builtin.dnf:
+        name: '*'
+        state: latest
+        update_cache: true
