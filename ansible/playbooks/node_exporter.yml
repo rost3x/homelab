@@ -1,0 +1,17 @@
+---
+- name: Node_exporter deployment tasks
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Create a node_exporter user
+      user:
+        name: node_exporter
+        shell: /sbin/nologin
+        create_home: no
+
+    - name: Copy node_exporter to /usr/local/bin
+      copy:
+        src: /usr/local/bin/node_exporter
+        dest: /usr/local/bin/node_exporter
+        mode: 0755
