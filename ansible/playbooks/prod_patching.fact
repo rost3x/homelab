@@ -1,0 +1,8 @@
+{
+  "patch_group": "group2",
+  "Rebooting": "false",
+  "appserver": "false",
+  "database": "false",
+  "webserver": "true",
+}
+

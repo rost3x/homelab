@@ -1,0 +1,23 @@
+---
+- name: Deploy custom facts to all servers
+  hosts: all
+  become: true
+  tasks:
+
+    - name: Create a facts directory if missing
+      file:
+        path: /etc/ansible/facts.d
+        state: directory
+
+    - name: Deploy facts to the dev servers
+      copy:
+        src: ~/repos/homelab/ansible/playbooks/dev_patching.fact
+        dest: /etc/ansible/facts.d/dev_patching.fact
+      when: '"dev" in env'
+
+    - name: Deploy facts to the prod servers
+      copy:
+        src: ~/repos/homelab/ansible/playbooks/prod_patching.fact
+        dest: /etc/ansible/facts.d/dev_patching.fact
+      when: '"prod" in env'
+
