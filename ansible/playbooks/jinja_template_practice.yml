@@ -3,5 +3,7 @@
   hosts: all
   tasks:
     - template:
-        src: /home/sysadmin/template.j2
-        dest: /tmp/template.txt
+      # src: /home/sysadmin/template.j2
+      # dest: /tmp/template.txt
+        src: /home/sysadmin/node_template.j2
+        dest: /tmp/node_template.txt

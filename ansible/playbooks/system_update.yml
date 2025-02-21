@@ -1,6 +1,7 @@
 ---
 - name: Update linux servers
   hosts: all
+  gather_facts: true
   become: true # Run as root
 
   tasks:
